@@ -56,16 +56,58 @@ button.normal{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 05px 30px;
     background-color:white;
     z-index: 999;
     position: sticky;
     top: 0;
     left:0;
+    position: relative;
+   border: 1px solid black;
 }
-#searchbar input{
-    height: 50px;
-    width: 400px;
+.search-box{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: #2f3640;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    text-align: center;
+   
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box:hover > .search-txt{
+    width: 340px;
+    padding: 0 0px;
+}
+.search-box:hover > .search-btn{
+    background-color: white;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+   
+    color: #00dbde;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    transition: 0.4s;
 }
 #navbar{
     display: flex;
@@ -120,6 +162,18 @@ button.normal{
   align-items: flex-start;
   justify-content: center;
 }
+#herokid{
+    background-image: url("http://cdn.shopify.com/s/files/1/0086/0150/1792/files/buy_kids_clothes_online_in_India_8ec7399a-b07b-4a00-8047-1af45ef5aae5.jpg?v=1603088857");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
 #hero div{
     border-color: 1px solid black;
     background-color: white;
@@ -129,6 +183,14 @@ button.normal{
     align-items: flex-start;
 }
 
+#herokid div{
+    border-color: 1px solid black;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 
 #feature .feature-box{
@@ -264,6 +326,7 @@ button.normal{
     background-size: cover;
     background-position: center ;
 }
+
 #banner h4{
     color: azure;
     font-size: 16px;
@@ -363,18 +426,12 @@ button.white {
 #newsletter p span{
     color: rgb(210, 210, 5);
 }
-#header .form{
-    display: flex;
-    width: 40%;
-   
-}
 
 #newsletter .form{
     display: flex;
     width: 40%;
 }
-#newsletter input,
-#header input{
+#newsletter input{
     height: 3.125rem;
     padding: 0 1.25em;
     font-size: 14px;
@@ -385,9 +442,7 @@ button.white {
     border-top-right-radius:0;
     border-bottom-right-radius:0;
 }
-#header input{
-    border: 1px solid black;
-}
+
 #newsletter button{
     background-color: #088178;
     color: white;
@@ -395,9 +450,7 @@ button.white {
     border-top-left-radius:0;
     border-bottom-left-radius:0;
 }
-#header button{
-    border: 1px solid black;
-}
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -446,3 +499,46 @@ footer a:hover{
     color: #088178;
 }
 
+/* Shop Page */
+
+#page-header{
+ width: 100%;
+ height: 40vh;
+ display: flex;
+ justify-content: space-evenly;
+ background-image: url("https://t4.ftcdn.net/jpg/03/06/69/49/360_F_306694930_S3Z8H9Qk1MN79ZUe7bEWqTFuonRZdemw.jpg");
+}
+
+
+#pageination{
+  text-align: center;
+}
+#pageination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #ffff;
+    font-weight: 600;
+}
+#pageination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* singal product */
+
+
+#prodetails .singal-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    /* flex basis to give space between them */
+    flex-basis: 24%;
+    cursor: pointer;
+}
