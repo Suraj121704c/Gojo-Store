@@ -173,6 +173,7 @@
 </html>
 <script>
     let bag =[]
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
     fetch("https://636c8d25ad62451f9fccdbfa.mockapi.io//mom?page=1&limit=24")
     .then((res)=>res.json())
     .then((data)=>{
@@ -182,7 +183,7 @@
     .catch((err)=>console.log(err))
    
     function search(){
-        document.querySelector("#product1").innerHTML = ""
+       document.querySelector("#product1").innerHTML = ""
        let q = document.querySelector("#search").value
        console.log(q)
        console.log(bag)
@@ -203,21 +204,37 @@
         title.innerText=elem.name 
 
         let price = document.createElement("h5")
-        price.innerText="₹"+elem.price
+        price.innerText="Price :$" +`${elem.price}`
 
         let color = document.createElement("h5")
-        color.innerText = elem.color
+        color.innerText = "Color :" + elem.color
 
         let category = document.createElement("h5")
-        category.innerText = elem.category
+        category.innerText = "Category :" + elem.category
         
         let description = document.createElement("p")
         description.innerText = elem.description
+        
+        let material = document.createElement("h5")
+        material.innerText = "Material :" + elem.material
 
         let button = document.createElement("button")
         button.innerText="Add to Cart"
+        button.addEventListener("click",function(){
+            let cart = JSON.parse(localStorage.getItem("cart")) || []
+            for(let i = 0;i<cart.length;i++){
+                if(cart[i].id == elem.id){
+                    alert("Product Already in Cart")
+                    return 
+                }
+            }
+            cart.push({...elem,quantity:1})
+            localStorage.setItem("cart",JSON.stringify(cart))
+            alert("Product Added to Cart")
+        })
+    
 
-        div.append(imageProd,title,price,color,category,description,button)
+        div.append(imageProd,title,price,color,category,description,material,button)
 
         document.querySelector("#product1").append(div)
      })
