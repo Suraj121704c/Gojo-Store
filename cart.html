@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cart</title>
+    <style>
+         #container div{
+            box-shadow: rgba(174, 81, 81, 0.05) 0px 6px 24px 0px, rgba(246, 5, 5, 0.08) 0px 0px 0px 1px;
+             text-align: center;
+             border-radius: 30px;
+        }
+         #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 2%;
+            padding: 1%;
+            gap: 20px
+    ;
+         }
+         #container>div>img{
+            height: 250px;
+            width: 200px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            display: block;
+            margin: 15px auto;
+         }
+         #container>div>button{
+            display: inline;
+            background-color: white;
+            color: black;
+            padding: 1%;
+            height: 30px;
+            margin-top: 2%;
+            font-size: 20px;
+         }
+         #container>div>button:hover{
+            color: white;
+            background-color: red;
+         }
+    
+         #container>div>span{
+            text-align: center;
+            display: inline;
+            font-size: 20px;
+            font-weight: 600;
+         }
+         #rem{
+            font-size: 10px;
+         }
+         #showtotal{
+            padding: 1%;
+            font-size: 30px;
+            margin-top: 3%;
+         }
+         .text{
+            text-align: center;
+            margin-top: 30px;
+            background: linear-gradient(90deg,#00dbde,#fc00ff);
+              font-family: Poppins;
+            font-size: 50px;
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text:hover{
+           background: linear-gradient(90deg,#64c064,#ff0000);
+           cursor: pointer;
+           -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #container div:hover{
+            box-shadow: 10px 10px 54px rgba(252, 0, 0, 0.8);
+            cursor: pointer;
+        }
+        #check{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #check>button{
+            padding: 10px;
+            border-radius: 5px;
+            color: black;
+            background-color: green;
+        }
+
+        #check>button:hover{
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+        #check>button>a{
+            text-decoration: none;
+            color: black;
+        }
+        #check>button>a:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+<section id="header">
+         <a href="index.html" class="logo"><img class="logic" src="img\Alia.png" alt=""></a>
+        
+           
+        <div class="search-box">
+            <input type="text" placeholder="Type to Search" class="search-txt">
+            <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+
+         <div>
+            <ul id="navbar">
+                <li><a  href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a class="active" href="cart.html"><i class="fas fa-shopping-bag"></i></i></a></li>
+            </ul>
+         </div>
+</section>
+<section id="top">
+    <div class="container">
+
+
+<div id="showtotal" class="text"><h2>Your Total Amout is :- $</h2></div>
+
+<div id="check">
+<button id="checkOut"><a href="payment.html"> Pay Here!</a></button>
+</div>
+<div id="container"></div>
+
+
+
+ <footer class="section-p1">
+   <div class="col">
+    <img src="img/Alia.png" alt="" class="logic logo">
+    <h4>Contact</h4>
+    <p><strong> Adress : </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+     <p><strong>Phone :</strong> +01 2222 365/(+91) 01 2345 6789</p>
+     <p><strong>Hours :</strong>10:00 - 18:00,Mon-Sat</p>
+     <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icon">
+            <i class='bx bxl-facebook'></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-pinterest-alt' ></i>
+            <i class='bx bxl-youtube' ></i>
+        </div>
+     </div>
+   </div>
+   <div class="col">
+    <h4>About</h4>
+    <a href="#">About Us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Contact Us</a>
+   </div>
+
+   <div class="col">
+    <h4>My Account</h4>
+    <a href="signup.html">Sign Up</a>
+    <a href="#">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+   </div>
+
+   <div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+    <img src="img/pay/app.jpg" alt="">
+    <img src="img/pay/play.jpg" alt="">
+</div>
+   <p>Secures Payment Gateway</p>
+   <img src="img/pay/pay.png" alt="" height="30px">
+   </div>
+
+   
+ </footer>
+</body>
+</html>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+    let carttotal = document.querySelector("#showtotal")
+
+    displayCard(cart)
+
+    function displayCard(cart){
+        document.querySelector("#container").innerHTML = ""
+        carttotal.textContent="Your Total Amout is :- $" + cart.reduce((a,b)=>{
+            return a+Number(b.price)*b.quantity
+        },0)
+        cart.forEach(function(e,i){
+            let div = document.createElement("div")
+
+            let image = document.createElement("img")
+            image.setAttribute("src",e.avatar)
+
+            let name = document.createElement("h3")
+            name.innerText = e.name
+
+            let category = document.createElement("h4")
+            category.innerText = "Category :" + e.category
+
+            let color = document.createElement("h5")
+            color.innerText = "Color :" + e.color
+
+            let material= document.createElement("h5")
+            material.innerText = "Material :" + e.material
+
+            let description = document.createElement("p")
+            description.innerText = e.description
+
+            let increase = document.createElement("button");
+            increase.textContent = "+"
+            increase.addEventListener("click",function(){
+                cart[i].quantity++;
+                localStorage.setItem("cart".JSON.stringify(cart))
+                displayCard(cart)
+            })
+
+            let quantity = document.createElement("span")
+            quantity.textContent = e.quantity
+
+
+
+            let price=document.createElement("h3")
+            price.innerText = "Price :"+`$${e.price}`
+
+
+            let decrement = document.createElement("button")
+            decrement.textContent = "-"
+            decrement.addEventListener("click",function(){
+                cart[i].quantity--
+                if(cart[i].quantity == 0){dlt()}
+                localStorage.setItem("cart",JSON.stringify(cart))
+                displayCard(cart)
+            })
+
+            let remove = document.createElement("button")
+            remove.textContent = "Remove"
+            remove.setAttribute("id","rem")
+            remove.addEventListener("click",dlt)
+
+
+            function dlt(){
+                cart.splice(i,i)
+                localStorage.setItem("cart",JSON.stringify(cart))
+                displayCard(cart)
+            }
+
+            div.append(image,name,category,color,material,description,price,increase,quantity,decrement,remove)
+
+            document.querySelector("#container").append(div)
+        });
+    }
+</script>

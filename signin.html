@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign In</title>
+    
+    <style>
+      div {
+  display: flex;
+  justify-content: space-around;
+}
+form {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 30%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 30px;
+}
+
+
+
+label {
+  font-size: 20px;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #8caacf;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0468aa;
+  color: white;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #2b619e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;   
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3973b6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: monospace;
+  color: #2b619e;
+  text-decoration: underline;
+}
+a{
+  text-align: center;
+  display: block;
+}
+.red{
+  text-decoration: none;
+  color: blue;
+}
+    </style>
+  </head>
+  <body>
+   
+    <button><a class="red" href="index.html"> Home</a></button>
+
+    <h1>Sign In</h1>
+    
+    <a href="signup.html"><h2>
+      SingUp Here If u Don't have any Account
+    </h2></a>
+    <div>
+     
+      <form>
+        <label for="">User Name / Email</label><br />
+        <input id="name" type="text" placeholder="Enter Email / User Name" /><br />
+        <label for="">Password </label><br />
+        <input id="password" type="password" placeholder="Enter Your Password" /><br />
+        <input type="submit" value="SignIn" />
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+document.querySelector("form").addEventListener("submit",myTodo); 
+
+let dataArr = JSON.parse(localStorage.getItem("data")) || [];
+
+
+function myTodo(){
+  event.preventDefault()
+  
+  let name = document.querySelector("#name").value
+  let password = document.querySelector("#password").value
+  let dataObj = {
+      name,
+      password,
+    }; 
+    if(dataObj.name == "" || dataObj == ""){
+      alert("Please Fill All the Details")
+    }else{
+    for(let i=0;i<dataArr.length;i++){
+      if(dataArr[i].name == dataObj.name && dataArr[i].password == dataObj.password){
+            alert("Login Successfull !")
+            break;
+      }else{
+        alert("Login Failed!")
+        break;
+      }
+    }
+    }
+}
+
+
+
+
+</script>

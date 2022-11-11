@@ -109,6 +109,9 @@ button.normal{
     width: 0px;
     transition: 0.4s;
 }
+
+/* Drop Down */
+
 #navbar{
     display: flex;
     align-items: center;
@@ -542,3 +545,4 @@ footer a:hover{
     flex-basis: 24%;
     cursor: pointer;
 }
+/* Cart Portion */
