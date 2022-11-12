@@ -15,10 +15,10 @@
     <title>Cart</title>
     <style>
          #container div{
-            box-shadow: rgba(174, 81, 81, 0.05) 0px 6px 24px 0px, rgba(246, 5, 5, 0.08) 0px 0px 0px 1px;
+             box-shadow: rgba(174, 81, 81, 0.05) 0px 6px 24px 0px, rgba(246, 5, 5, 0.08) 0px 0px 0px 1px;
              text-align: center;
              border-radius: 30px;
-        }
+        }                       
          #container{
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -249,7 +249,7 @@
             decrement.textContent = "-"
             decrement.addEventListener("click",function(){
                 cart[i].quantity--
-                if(cart[i].quantity == 0){dlt()}
+                if(cart[i].quantity < 1){dlt()}
                 localStorage.setItem("cart",JSON.stringify(cart))
                 displayCard(cart)
             })
@@ -261,7 +261,7 @@
 
 
             function dlt(){
-                cart.splice(i,i)
+                cart.splice(i,1)
                 localStorage.setItem("cart",JSON.stringify(cart))
                 displayCard(cart)
             }
