@@ -1,4 +1,4 @@
-# divine-eggnog-8153
+# Gojo Store
 # In this repo is just tried to copy YOOX site .
 # Createad a clone of frontend of yoox .
 
